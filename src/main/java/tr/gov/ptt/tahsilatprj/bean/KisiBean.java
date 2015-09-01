@@ -65,10 +65,10 @@ public class KisiBean implements Serializable {
             return "menu.xhtml";
             
         } else {
-            
+            kisi=new Kisi();
             JSFUtil.hataGoster(backendText.getString("tahsilatprj.giris.loginErrorSummary"), 
                                backendText.getString("tahsilatprj.giris.loginErrorDetail"));
-            return "giris.xhtml";
+            return "";
         }
         
         
