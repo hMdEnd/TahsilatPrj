@@ -1,7 +1,11 @@
 
 package tr.gov.ptt.tahsilatprj.bean;
 
+import javax.enterprise.context.RequestScoped;
+import javax.faces.bean.ManagedBean;
 
+@ManagedBean
+@RequestScoped
 
 public class DummyBean {
     private String ad;
@@ -21,6 +25,11 @@ public class DummyBean {
 
     public void setSifre(String sifre) {
         this.sifre = sifre;
+    }
+    
+    public String sayfayaGit()
+    {
+        return "";
     }
     
 }

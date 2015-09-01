@@ -20,7 +20,7 @@
         
         
         <message-bundle>
-             tr.gov.ptt.tahsilatprj.msg.VadidationMessages
+            ValidationMessages
             
         </message-bundle>
         
