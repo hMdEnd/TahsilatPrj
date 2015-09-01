@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package tr.gov.ptt.tahsilatprj.entity;
 
 import java.io.Serializable;
@@ -28,7 +24,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Administrator
+ * @author BEM
  */
 @Entity
 @Table(name = "THS_KISI")
@@ -41,7 +37,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Kisi.findByDogtar", query = "SELECT k FROM Kisi k WHERE k.dogtar = :dogtar"),
     @NamedQuery(name = "Kisi.findByMaas", query = "SELECT k FROM Kisi k WHERE k.maas = :maas"),
     @NamedQuery(name = "Kisi.findByTema", query = "SELECT k FROM Kisi k WHERE k.tema = :tema"),
-    @NamedQuery(name = "Kisi.girisKontrol", query = "SELECT k FROM Kisi k WHERE k.kullaniciAd = :kullaniciAd and k.sifre = :sifre"),
+    @NamedQuery(name = "Kisi.girisKontrol", 
+     query = "SELECT k FROM Kisi k WHERE k.kullaniciAd = :kullaniciAd and k.sifre = :sifre"),
     @NamedQuery(name = "Kisi.findByKullaniciAd", query = "SELECT k FROM Kisi k WHERE k.kullaniciAd = :kullaniciAd"),
     @NamedQuery(name = "Kisi.findBySifre", query = "SELECT k FROM Kisi k WHERE k.sifre = :sifre")})
 public class Kisi implements Serializable {
@@ -51,7 +48,7 @@ public class Kisi implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "NO")
-    @SequenceGenerator(name = "kisiseq" , sequenceName = "SEQ_THS_KISI" , initialValue = 1, allocationSize = 1  )
+    @SequenceGenerator(name = "kisiseq", sequenceName = "SEQ_THS_KISI", initialValue = 1, allocationSize = 1)
     @GeneratedValue(generator = "kisiseq", strategy = GenerationType.SEQUENCE)
     private Integer no;
     @Size(max = 30)
@@ -79,7 +76,7 @@ public class Kisi implements Serializable {
     private Tip tip;
 
     public Kisi() {
-        tip=new Tip();
+        tip = new Tip();
     }
 
     public Kisi(Integer no) {
@@ -177,7 +174,7 @@ public class Kisi implements Serializable {
         }
         return true;
     }
-
+ 
     @Override
     public String toString() {
         return "tr.gov.ptt.tahsilatprj.entity.Kisi[ no=" + no + " ]";

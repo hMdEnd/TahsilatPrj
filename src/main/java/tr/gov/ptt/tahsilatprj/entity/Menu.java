@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Administrator
+ * @author BEM
  */
 @Entity
 @Table(name = "THS_MENU")
@@ -63,7 +63,6 @@ public class Menu implements Serializable {
     private List<Tip> tipList;
 
     public Menu() {
-        
     }
 
     public Menu(Integer no) {

@@ -12,7 +12,7 @@ import tr.gov.ptt.tahsilatprj.entity.Tip;
 
 /**
  *
- * @author Administrator
+ * @author BEM
  */
 @Stateless
 public class TipFacade extends AbstractFacade<Tip> {

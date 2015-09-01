@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Administrator
+ * @author BEM
  */
 @Entity
 @Table(name = "THS_TIP")
@@ -47,7 +47,7 @@ public class Tip implements Serializable {
     private String ad;
     @ManyToMany(mappedBy = "tipList")
     private List<Menu> menuList;
-    @OneToMany(mappedBy = "tip" , cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "tip", cascade = CascadeType.ALL)
     private List<Kisi> kisiList;
 
     public Tip() {
